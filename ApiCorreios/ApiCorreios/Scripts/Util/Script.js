@@ -1,46 +1,55 @@
-
 var info = {
-    nCdEmpresa,
-    sDsSenha,
-    sCepOrigem,
-    sCepDestino,
-    nVlPeso,
-    nCdFormato,
-    nVlComprimento,
-    nVlAltura,
-    nVlLargura,
-    sCdMaoPropria,
-    nVlValorDeclarado,
-    sCdAvisoRecebimento,
-    nCdServico,
-    nVlDiametro,
-    StrRetorno= "xml"
-}
-$(document).ready(
-    function () {
-        nCdEmpresa = $('input[name="codigo"]').val();
-        sDsSenha = $('input[name="senha"]').val();
-        sCepOrigem = $('input[name="cepori"]').val();
-        sCepDestino = $('input[name="cepdes"]').val();
-        nVlPeso = $('input[name="peso"]').val();
-        nCdFormato = $('select[name="formato"]').val();
-        nVlComprimento = $('input[name="comprimento"]').val();
-        nVlAltura = $('input[name="altura"]').val();
-        nVlLargura = $('input[name="largura"]').val();
-        sCdMaoPropria = $('select[name="maopropria"]').val();
-        nVlValorDeclarado = $('input[name="valordeclarado"]').val();
-        sCdAvisoRecebimento = $('select[name="avisorecebimento"]').val();
-        nCdServico = $('input[name="servicos"]').val();
-        nVlDiametro = $('input[name="diametro"]').val();
+    nCdEmpresa:"",
+    sDsSenha: "",
+    sCepOrigem: "",
+    sCepDestino: "",
+    nVlPeso: "",
+    nCdFormato: "",
+    nVlComprimento: "",
+    nVlAltura: "",
+    nVlLargura: "",
+    sCdMaoPropria: "",
+    nVlValorDeclarado: "",
+    sCdAvisoRecebimento: "",
+    nCdServico: "",
+    nVlDiametro: ""
+};
+
+
+
+$(document).ready(function () {
+    $('#Submit1').click(function () {
+        info.nCdEmpresa = $('input[name="codigo"]').val();
+        info.sDsSenha = $('input[name="senha"]').val();
+        info.sCepOrigem = $('input[name="cepori"]').val();
+        info.sCepDestino = $('input[name="cepdes"]').val();
+        info.nVlPeso = $('input[name="peso"]').val();
+        info.nCdFormato = $('select[name="formato"]').val();
+        info.nVlComprimento = $('input[name="comprimento"]').val();
+        info.nVlAltura = $('input[name="altura"]').val();
+        info.nVlLargura = $('input[name="largura"]').val();
+        info.sCdMaoPropria = $('select[name="maopropria"]').val();
+        info.nVlValorDeclarado = $('input[name="valordeclarado"]').val();
+        info.sCdAvisoRecebimento = $('select[name="avisorecebimento"]').val();
+        info.nCdServico = $('input[name="servicos"]').val();
+        info.nVlDiametro = $('input[name="diametro"]').val();
 
         var template = "";
 
         $.each(info, function (key, element) {
             template += key + "=" + element + "&";
         });
-        template += "nIndicaCalculo=3";
+        template += "StrRetorno=xml&nIndicaCalculo=3";
+        var MsgErro = "";
+        var url = "http://usysweb.com.br/api/correiosambev.php?" + template;
+        var alla = "";
+        var alllll = "";
+        $.getJSON(url, function (data) {
+            alla = data.cServico.Valor;
+            alllll = data.cServico.Prazo;
+        });
 
-        $.getJSON("http://usysweb.com.br/api/correiosambev.php?" + template, function (data) { });
-
-    }
-);
+        
+        window.open("index2.html?" + template, '_blank');
+    });
+});
