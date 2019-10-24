@@ -8,7 +8,7 @@ $(document).ready(function () {
  
         $('input[name="codigo"]').val(queryString("Codigo"));
         $('input[name="valor"]').val(queryString("Valor"));
-        $('input[name=" prazoentrega"]').val(queryString("PrazoEntrega"));
+        $('input[name="prazoentrega"]').val(queryString("PrazoEntrega"));
         $('input[name="valorsemadicionais"]').val(queryString("ValorSemAdicionais"));
         $('input[name="valormaopropria"]').val(queryString("ValorMaoPropria"));
         $('input[name="valoravisorecebimento"]').val(queryString("ValorAvisoRecebimento"));
