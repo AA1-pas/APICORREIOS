@@ -1,0 +1,135 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="Content/css/stile.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>CalculoCorreio</title>
+</head>
+<body>
+    <div class="container-fluid h-50" style="margin-top:330px;">
+        <div class="row d-flex align-content-center justify-content-center h-50">
+            <div class="col-md-3" id="coluna">
+                <div class="card" id="card">
+                    <div class="card-header">
+                        Calculo Correio
+                    </div>
+                    <form name="frm" method="post" send-post="correiosambev" id="Form1">
+                        <legend>Calculo de Frete</legend>
+                        <div>
+                            <span style="width:130px;">Serviços:</span>
+                            <span><input type="text" name="nCdServico" style="width:250px;" class="form-group"value=""></span>
+                        </div>
+                        <div>
+                            <span style="width:130px;">Cep Origem:</span>
+                            <span><input type="text" name="sCepOrigem" style="width:222px;" value=""></span>
+                        </div>
+                        <div>
+                            <span style="width:130px;">Cep Destino:</span>
+                            <span><input type="text" name="sCepDestino" value=""></span>
+                        </div>
+                        <div>
+                            <span style="width:130px;">Peso:</span>
+                            <span><input type="text" name="nVlPeso" value=""></span>
+                        </div>
+                        <div>
+                            <span style="width:130px;">Formato:</span>
+                            <span>
+                                <select name="nCdFormato" size="1">
+                                    <option value="1">Caixa/pacote</option>
+                                    <option value="2">Rolo/prisma</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div>
+                            <span style="width:130px;">Comprimento:</span>
+                            <span><input type="text" name="nVlComprimento" value=""></span>
+                        </div>
+                        <div>
+                            <span style="width:130px;">Altura:</span>
+                            <span><input type="text" name="nVlAltura" value=""></span>
+                        </div>
+                        <div>
+                            <span style="width:130px;">Largura:</span>
+                            <span><input type="text" name="nVlLargura" value=""></span>
+                        </div>
+                        <div>
+                            <span style="width:130px;">Diâmetro:</span>
+                            <span><input type="text" name="nVlDiametro" value=""></span>
+                        </div>
+                        <div>
+                            <span style="width:130px;">Mão própria:</span>
+                            <span>
+                                <select name="nCdMaoPropria" size="1">
+                                    14/16
+                                    DEENC – Departamento de Encomendas
+                                    Revisão 13/05/2019
+                                    <option value="S">Sim</option>
+                                    <option value="N">Não</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div>
+                            <span style="width:130px;">Valor declarado:</span>
+                            <span><input type="text" name="nVlValorDeclarado" value=""></span>
+                        </div>
+                        <div>
+                            <span style="width:130px;">Aviso de Recebimento:</span>
+                            <span>
+                                <select name="sCdAvisoRecebimento" size="1">
+                                    <option value="S">Sim</option>
+                                    <option value="N">Não</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div>
+                            <span style="width:130px;">Retorno:</span>
+                            <span><input type="text" name="StrRetorno" value=""></span>
+                        </div>
+                        <div>
+                            <input type="button" class="w-100 btn btn-success form-group" id="idbntconsultar" name="bntconsultar" value="Consultar" data-toggle="modal" data-target="#exampleModal" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resultado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <span>Valor: R$ </span>
+                        <span name="Valor"></span>
+                    </p>
+                    <p>
+                        <span>PrazoEntrega: </span>
+                        <span name="PrazoEntrega"></span>
+                        <span>dia(s)</span>
+                    </p>
+                    <p>
+                        <span>Valor Sem Adicionais: R$ </span>
+                        <span name="ValorSemAdicionais"></span>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="Scripts/Util/Script.js"></script>
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/popper.js"></script>
+</body>
+</html>

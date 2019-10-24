@@ -1,0 +1,13 @@
+﻿
+body {
+    height: 100vh;
+    background-image: url('https://www.correios.com.br/encomendas-logistica/minhas-importacoes/importacoes/imagens/domicilio');
+    background-size: cover;
+  
+}
+form {
+    margin-left: 30px;
+}
+div[id="card"] {
+    background-color: #b3ba9324;
+}    

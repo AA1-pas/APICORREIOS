@@ -1,0 +1,102 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="Content/css/Style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>CalculoCorreio</title>
+</head>
+<body>
+    <div class="container-fluid h-50" style="margin-top:350px;">
+        <div class="row d-flex align-content-center justify-content-center h-50">
+            <div class="col-md-3" id="coluna">
+                <div class="card"id="card">
+                    <div class="card-header">
+                      Retorno Calculo Correio
+                    </div>
+                    <form name="frm" action="" method="post" ID="Form1">
+                        <fieldset style="background:center;">
+                            <legend>Retorno</legend>
+                            <div class="w-100 form-group">
+                                <span style="width:130px;">Codigo Serviço:</span>
+                                <span><input type="text" style="width:250px;" name="codigo" value=""></span>
+                            </div>
+                            
+                            <div class="w-100 form-group">
+                                <span style="width:130px;"> Prazo de Entrega :</span>
+                                <span><input type="text" style="width:250px;" name="prazoentrega" value=""></span>
+                            </div>
+                            <div class="w-100 form-group">
+                                <span style="width:130px;">Valor Sem Adicionais:</span>
+                                <span><input type="text" style="width:250px;" name="valorsemadicionais" value=""></span>
+                            </div>
+                            <div class="w-100 form-group">
+                                <span style="width:130px;">Valor Mao Propria:</span>
+                                <span><input type="text" style="width:250px;" name="valormaopropria" value=""></span>
+                            </div>
+                            <div class="w-100 form-group">
+                                <span style="width:130px;">Formato:</span>
+                                <span>
+                                    <select style="width:180px;" name="formato" size="1">
+                                        <option value="1">Caixa/pacote</option>
+                                        <option value="2">Rolo/prisma</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="w-100 form-group">
+                                <span style="width:130px;">Valor Aviso de Recebimento:</span>
+                                <span><input type="text" style="width:250px;" name="valoravisorecebimento" value=""></span>
+                            </div>
+                            <div class="w-100 form-group">
+                                <span style="width:130px;">Valor Valor Declarado:</span>
+                                <span><input type="text" style="width:250px;" name="valorvalordeclarado" value=""></span>
+                            </div>
+                            <div class="w-100 form-group">
+                                <span style="width:130px;">Entrega Domiciliar:</span>
+                                <span><input type="text" style="width:250px;" name="entregadomiciliar" value=""></span>
+                            </div>
+                            <div class="w-100 form-group">
+                                <span style="width:130px;">Entrega Sabado:</span>
+                                <span><input type="text" style="width:250px;" name="entregasabado" value=""></span>
+                            </div>
+                            <div class="w-100 form-group">
+                                <span style="width:130px;">obs Fim:</span>
+                                <span>
+                                    <select name="obsFim" size="1">
+                                        14/16
+                                        DEENC – Departamento de Encomendas
+                                        Revisão 13/05/2019
+                                        <option value="S">Sim</option>
+                                        <option value="N">Não</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="w-100 form-group">
+                                <span style="width:130px;">Erro:</span>
+                                <span><input type="text" style="width:215px;" name="erro" value=""></span>
+                            </div>
+                            <div class="w-100 form-group">
+                                <span style="width:130px;">Mensagem Erro:</span>
+                                <span>
+                                    <select name="msgerro" size="1">
+                                        <option value="S">Sim</option>
+                                        <option value="N">Não</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="w-100 form-group">
+                                
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="Scripts/Util//Script_valorfrete.js"></script>
+</body>
+</html>

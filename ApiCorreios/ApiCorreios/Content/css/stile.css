@@ -1,0 +1,11 @@
+﻿body {
+    height: 100vh;
+    background-image: url('https://avaazdo.s3.amazonaws.com/original_5cc236b4bb784.jpg');
+    background-size: cover;
+}
+form {
+    margin-left: 10px;
+}
+div[id="card"] {
+    background-color: #b3ba9324;
+}    
