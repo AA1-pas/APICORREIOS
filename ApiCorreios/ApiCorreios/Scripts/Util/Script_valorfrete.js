@@ -16,7 +16,8 @@ $(document).ready(function () {
         $('input[name="entregadomiciliar"]').val(queryString("EntregaDomiciliar"));
         $('input[name="entregasabado"]').val(queryString("EntregaSabado"));
         $('input[name="obsfim"]').val(queryString("obsFim"));
-        $('input[name="erro"]').val(queryString("Erro"));
+    $('input[name="erro"]').val(queryString("Erro"));
+
         $('input[name="msgerro"]').val(queryString("MsgErro"));
     
 
