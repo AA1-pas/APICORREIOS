@@ -35,6 +35,7 @@ $(document).ready(function () {
         info.nVlDiametro = $('input[name="diametro"]').val();
 
         var template = "";
+        var template2 = "";
 
         $.each(info, function (key, element) {
             template += key + "=" + element + "&";
@@ -45,11 +46,12 @@ $(document).ready(function () {
         var alla = "";
         var alllll = "";
         $.getJSON(url, function (data) {
-            alla = data.cServico.Valor;
-            alllll = data.cServico.Prazo;
+            $.each(data.cServico, function (key, element) {
+                template2 += key + "=" + element + "&";
+            });
         });
 
         
-        window.open("index2.html?" + template, '_blank');
+        window.open("retornofrete.html?" + template2, '_blank');
     });
 });

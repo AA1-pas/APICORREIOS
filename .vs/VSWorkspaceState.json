@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ApiCorreios",
+    "\\ApiCorreios\\ApiCorreios",
+    "\\ApiCorreios\\ApiCorreios\\Scripts",
+    "\\ApiCorreios\\ApiCorreios\\Scripts\\Util"
   ],
+  "SelectedNode": "\\ApiCorreios\\ApiCorreios\\Index.html",
   "PreviewInSolutionExplorer": false
 }
