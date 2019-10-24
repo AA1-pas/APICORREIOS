@@ -36,22 +36,22 @@ $(document).ready(function () {
 
         var template = "";
         var template2 = "";
-
         $.each(info, function (key, element) {
             template += key + "=" + element + "&";
         });
         template += "StrRetorno=xml&nIndicaCalculo=3";
-        var MsgErro = "";
+  
         var url = "http://usysweb.com.br/api/correiosambev.php?" + template;
-        var alla = "";
-        var alllll = "";
+       
         $.getJSON(url, function (data) {
             $.each(data.cServico, function (key, element) {
                 template2 += key + "=" + element + "&";
             });
+
+            window.open("retornofrete.html?" + template2, '_blank');
         });
 
         
-        window.open("retornofrete.html?" + template2, '_blank');
+        
     });
 });
