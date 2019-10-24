@@ -1,46 +1,25 @@
-var retorno = {
-    Codigo: "",
-    Valor: "",
-    PrazoEntrega: "",
-    ValorSemAdicionais: "",
-    ValorMaoPropria: "",
-    ValorAvisoRecebimento: "",
-    ValorValorDeclarado: "",
-    EntregaDomiciliar: "",
-    EntregaSabado: "",
-    obsFim: "",
-    Erro: ""
-};
 
 $(document).ready(function () {
-    var variavel2 = queryString("Valor");
+  
 
-    debugger
-
-    $('#Submit1').click(function () {
-
-        var variavel = queryString("Valor");
         
         var url = "index.html";
-        $.getJSON(url, function (data) {
-            $('input[name="codigo"]').val(data.cServico.Codigo);
-            
-        });
-        $('input[name="codigo"]').val(data.cServico.Codigo);
-        $('input[name="valor"]').val(data.cServico.Valor);
-        $('input[name=" prazoentrega"]').val(data.cServico.PrazoEntrega);
-        $('input[name="valorsemadicionais"]').val(data.cServico.ValorSemAdicionais);
-        $('input[name="valormaopropria"]').val(data.cServico.ValorMaoPropria);
-        $('input[name="valoravisorecebimento"]').val(data.cServico.ValorAvisoRecebimento);
-        $('input[name="valorvalordeclarado"]').val(data.cServico.ValorValorDeclarado);
-        $('input[name="entregadomiciliar"]').val(data.cServico.EntregaDomiciliar);
-        $('input[name="entregasabado"]').val(data.cServico.EntregaSabado);
-        $('input[name="obsfim"]').val(data.cServico.obsFim);
-        $('input[name="erro"]').val(data.cServico.Erro);
-        $('input[name="msgerro"]').val(data.cServico.MsgErro);
+
+ 
+        $('input[name="codigo"]').val(queryString("Codigo"));
+        $('input[name="valor"]').val(queryString("Valor"));
+        $('input[name=" prazoentrega"]').val(queryString("PrazoEntrega"));
+        $('input[name="valorsemadicionais"]').val(queryString("ValorSemAdicionais"));
+        $('input[name="valormaopropria"]').val(queryString("ValorMaoPropria"));
+        $('input[name="valoravisorecebimento"]').val(queryString("ValorAvisoRecebimento"));
+        $('input[name="valorvalordeclarado"]').val(queryString("ValorValorDeclarado"));
+        $('input[name="entregadomiciliar"]').val(queryString("EntregaDomiciliar"));
+        $('input[name="entregasabado"]').val(queryString("EntregaSabado"));
+        $('input[name="obsfim"]').val(queryString("obsFim"));
+        $('input[name="erro"]').val(queryString("Erro"));
+        $('input[name="msgerro"]').val(queryString("MsgErro"));
     
 
-    });
 });
 
 function queryString(parameter) {
