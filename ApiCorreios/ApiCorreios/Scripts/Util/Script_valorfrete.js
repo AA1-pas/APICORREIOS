@@ -35,6 +35,7 @@ function queryString(parameter) {
     if (param_value) {
         return param_value;
     }
+
     else {
         return undefined;
     }

@@ -45,10 +45,11 @@ $(document).ready(function () {
        
         $.getJSON(url, function (data) {
             $.each(data.cServico, function (key, element) {
-                template2 += key + "=" + element + "&";  
+                template2 += key + "=" + element + "&";
             });
+
             window.open("retornofrete.html?" + template2, '_blank');
-            });
+        });
 
         
         
